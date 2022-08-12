@@ -1,6 +1,7 @@
 @import "../../../../variables.scss";
 
 #menu {
+    z-index: 1;
     height: 8vh;
     width: 100vw;
     position: fixed;
@@ -29,6 +30,10 @@ img{
     transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
     stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.opened > svg > .line{
+    stroke: black;
+}
+
 .line1 {
     stroke-dasharray: 60 207;
     stroke-width: 6;
@@ -55,4 +60,21 @@ img{
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 6;
+}
+
+
+
+
+
+.openedMenu {
+    z-index: 0;
+    position: relative;
+    background: $base-yellow;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    outline: 0;
 }
